@@ -1,0 +1,56 @@
+﻿body {
+    font-size: 24px;
+}
+p.green {
+    color: green;
+}
+p.red {
+    color: red;
+}
+p.italic {
+    font-style: italic;
+}
+p.bold {
+    font-weight: bold;
+}
+li.green {
+    color: green;
+}
+li.red {
+    color: red;
+}
+li.yellow {
+    color: yellow;
+}
+li.blue {
+    color: blue;
+}
+span.xxsmall {
+    font-size: 15px;
+}
+span.xsmall {
+    font-size: 30px;
+}
+span.small {
+    font-size: 45px;
+}
+span.medium {
+    font-size: 60px;
+}
+span.large {
+    font-size: 75px;
+}
+span.xlarge {
+    font-size: 90px;
+}
+span.xxlarge {
+    font-size: 105px;
+}
+.sign {
+    text-align: right;
+    padding-top: 0px;
+    font-size: 19px;
+}
+.fit-picture {
+    width: 300px;
+}
