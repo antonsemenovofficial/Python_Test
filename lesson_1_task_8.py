@@ -1,22 +1,16 @@
 def num0():
     return 0
-def num1():
-    return 1
-def num2():
-    return 2
-def num3():
-    return 3
-def num4():
-    return 4
-def num5():
-    return 5
-def num6():
-    return 6
-def num7():
-    return 7
-def num8():
-    return 8
-def num9():
-    return 9
+def numb(parametr):
+    print(parametr)
 
-print(num8(),num8(),num0(),num0(),num5(),num5(),num5(),num3(),num5(),num3(),num5())
+numb(8)
+numb(8)
+numb(0)
+numb(0)
+numb(5)
+numb(5)
+numb(5)
+numb(3)
+numb(5)
+numb(3)
+numb(5)
