@@ -1,5 +1,3 @@
-def num0():
-    return 0
 def numb(parametr):
     print(parametr)
 
