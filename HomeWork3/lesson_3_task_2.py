@@ -10,5 +10,10 @@ gadget4 = Smartphone("Nokia", "3310", "+79999999966")
 gadget5 = Smartphone("Huawei", "P50", "+79999999955")
 
 
-catalog = [gadget1.say(), gadget2.say(), gadget3.say(), gadget4.say(), gadget5.say()]
+catalog = [gadget1, gadget2, gadget3, gadget4, gadget5]
 
+def saycatalog():
+    if catalog == []:
+        print("Каталог пуст")
+    else:
+        print(catalog)

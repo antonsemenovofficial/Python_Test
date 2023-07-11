@@ -15,9 +15,3 @@ class Address:
     def sayaddressfrom(self):
         print(self.index, self.city, self.street, self.build, self.flat)
 
-to_address1 = Address(111000, "Moscow", "Sadovay", 15, 122)
-from_address1 = Address(111222, "Moscow", "Sadovay", 22, 333)
-
-to_address1.sayadressto()
-from_address1.sayaddressfrom()
-
