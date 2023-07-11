@@ -12,9 +12,3 @@ class User:
         print("Моя фамилия" , self.last_name)
     def sayFull(self):
         print("Меня зовут", self.fullname)
-
-user1 = User("Антон", "Семенов")
-
-user1.sayName()
-user1.sayLastName()
-user1.sayFull()

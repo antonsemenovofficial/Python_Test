@@ -11,9 +11,3 @@ class Mailing:
         self.track = track
     def sayMailing(self):
         print("Куда:", self.to_address, "Откуда:", self.from_address, "Цена:", self.cost, "Трек-номер:", self.track )
-
-to_address3 = (100112, 'Moscow', 'Street1', 15, 111)
-from_address3 = (100112, 'Moscow', 'Street2', 25, 211)
-mailing2 = Mailing(to_address3, from_address3, 5, 112233445566)
-
-mailing2.sayMailing()
