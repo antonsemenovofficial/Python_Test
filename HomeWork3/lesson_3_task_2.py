@@ -12,8 +12,3 @@ gadget5 = Smartphone("Huawei", "P50", "+79999999955")
 
 catalog = [gadget1, gadget2, gadget3, gadget4, gadget5]
 
-def saycatalog():
-    if catalog == []:
-        print("Каталог пуст")
-    else:
-        print(catalog)

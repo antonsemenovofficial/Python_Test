@@ -1,9 +1,11 @@
 mounth = int(input('введите номер месяца: '))
 
 if mounth < 1:
-    mounth = 1
+    print('Неверно введен месяц')
+    exit()
 if mounth > 12:
-    mounth = 12
+    print('Неверно введен месяц')
+    exit()
 
 def month_to_season(mounth):
     if (mounth == 12 or mounth == 1 or mounth == 2):
