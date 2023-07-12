@@ -3,7 +3,7 @@ class User:
         print("Создано")
         self.first_name = first_name
         self.last_name = last_name
-        self.fullname = first_name + " " + last_name
+        self.full_name = first_name + " " + last_name
 
     
     def say_name(self):
@@ -11,4 +11,4 @@ class User:
     def say_last_name(self):
         print("Моя фамилия" , self.last_name)
     def say_full(self):
-        print("Меня зовут", self.fullname)
+        print("Меня зовут", self.full_name)
