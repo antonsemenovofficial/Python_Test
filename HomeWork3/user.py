@@ -6,9 +6,9 @@ class User:
         self.fullname = first_name + " " + last_name
 
     
-    def sayName(self):
+    def say_name(self):
         print("Мое имя", self.first_name)
-    def sayLastName(self):
+    def say_last_name(self):
         print("Моя фамилия" , self.last_name)
-    def sayFull(self):
+    def say_full(self):
         print("Меня зовут", self.fullname)

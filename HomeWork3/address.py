@@ -1,8 +1,3 @@
-index = ''
-city = ''
-street = ''
-build = ''
-flat = ''
 class Address:
     def __init__(self, index, city, street, build, flat):
         self.index = index
@@ -10,8 +5,10 @@ class Address:
         self.street = street
         self.build = build
         self.flat = flat
-    def sayadressto(self):
+    def say_adress_to(self):
         print(self.index, self.city, self.street, self.build, self.flat)
-    def sayaddressfrom(self):
+    def say_address_from(self):
         print(self.index, self.city, self.street, self.build, self.flat)
+    def __str__(self):
+        return f'{self.index}, {self.city}, {self.street}, {self.build}, {self.flat}'
 
