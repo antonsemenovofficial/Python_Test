@@ -2,15 +2,19 @@ from string_utils import StringUtils
 
 string_utils = StringUtils()
 
-def test_trim():
+def test_trim_positive():
     string_utils = StringUtils()
     res = string_utils.trim('   Anton')
     assert res == 'Anton'
+def test_trim_negative():
+    string_utils = StringUtils()
+    res = string_utils.trim('   Anton')
+    assert res == '  Anton'
     
 def test_capitilize():
     string_utils = StringUtils()
     res = string_utils.capitilize('anton')
-    assert res == 'anton'
+    assert res == 'Anton'
 
 def test_to_list():
     string_utils = StringUtils()
