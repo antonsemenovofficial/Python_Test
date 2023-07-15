@@ -31,6 +31,10 @@ def test_to_list_negative():
     string_utils = StringUtils()
     res = string_utils.to_list('Ark')
     assert res == 'Ark'
+def test_to_list_two():
+    string_utils = StringUtils()
+    res = string_utils.to_list("")
+    assert res == []
 
 ## Поиск буквы в слове
 def test_contains():
@@ -102,3 +106,7 @@ def test_list_to_string():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
     assert res == ("A, n, t, o, n")
+def test_list_to_string_negative():
+    string_utils = StringUtils()
+    res = string_utils.list_to_string(["A","n","t","o","n"])
+    assert res == ["A, n, t, o, n"]
