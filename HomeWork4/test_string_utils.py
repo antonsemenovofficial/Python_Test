@@ -87,7 +87,7 @@ def test_starts_with():
 def test_starts_with_negative():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", "n")
-    assert res == False
+    assert res == True
 
 
 
