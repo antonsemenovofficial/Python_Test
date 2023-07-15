@@ -4,7 +4,10 @@ from string_utils import StringUtils
 string_utils = StringUtils()
 
 ## Убираем пробелы перед словом
-@pytest.mark.parametrize('str', 'result', [('  Anton', 'Anton'), ('  4 april 2023', '4 april 2023')])
+@pytest.mark.parametrize('str', 'result',[
+("  Anton", "Anton"), 
+("  4 april 2023", "4 april 2023")
+])
 def test_trim_positive(str, result):
     string_utils = StringUtils()
     res = string_utils.trim(str)
