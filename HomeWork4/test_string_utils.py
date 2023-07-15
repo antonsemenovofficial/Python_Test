@@ -44,6 +44,10 @@ def test_to_list_two():
     string_utils = StringUtils()
     res = string_utils.to_list("")
     assert res == []
+def test_to_list_three():
+    string_utils = StringUtils()
+    res = string_utils.to_list(" ")
+    assert res == []
 
 ## Поиск буквы в слове
 def test_contains():
@@ -107,6 +111,10 @@ def test_is_empty():
     string_utils = StringUtils()
     res = string_utils.is_empty("")
     assert res == True
+def test_is_empty_two():
+    string_utils = StringUtils()
+    res = string_utils.is_empty(" ")
+    assert res == True
 @pytest.mark.xfail(strict=True)
 def test_is_empty_negative():
     string_utils = StringUtils()
@@ -128,3 +136,13 @@ def test_list_to_string_negative():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
     assert res == ["A, n, t, o, n"]
+@pytest.mark.xfail(strict=True)
+def test_list_to_string_negative_two():
+    string_utils = StringUtils()
+    res = string_utils.list_to_string(["A","n","t","o","n"])
+    assert res == []
+@pytest.mark.xfail(strict=True)
+def test_list_to_string_negative_three():
+    string_utils = StringUtils()
+    res = string_utils.list_to_string(["A","n","t","o","n"])
+    assert res == ("")
