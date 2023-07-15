@@ -4,12 +4,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
-driver.get("https://ya.ru")
-driver.get("https://vk.com")
+driver.maximize_window()
+driver.get("https://repetitor-alexeeva.ru")
+driver.save_screenshot('./test.png')
 
-for x in range(1.10):   
-    driver.back()
-    driver.forward()
+  
+#driver.back()
+#driver.forward()
+#driver.refresh()
 
 
 
