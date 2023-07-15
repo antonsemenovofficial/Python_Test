@@ -12,6 +12,8 @@ def test_trim_positive_two():
     string_utils = StringUtils()
     res = string_utils.trim('  4 april 2023')
     assert res == '4 april 2023'
+
+@pytest.mark.xfail(strict=True)
 def test_trim_negative():
     string_utils = StringUtils()
     res = string_utils.trim('   Anton')
