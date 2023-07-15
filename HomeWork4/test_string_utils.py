@@ -24,6 +24,7 @@ def test_capitilize():
     string_utils = StringUtils()
     res = string_utils.capitilize('anton')
     assert res == 'Anton'
+@pytest.mark.xfail(strict=True)
 def test_capitilize_negative():
     string_utils = StringUtils()
     res = string_utils.capitilize('anton')
@@ -34,6 +35,7 @@ def test_to_list():
     string_utils = StringUtils()
     res = string_utils.to_list('Ark')
     assert res == ['Ark']
+@pytest.mark.xfail(strict=True)
 def test_to_list_negative():
     string_utils = StringUtils()
     res = string_utils.to_list('Ark')
@@ -48,10 +50,12 @@ def test_contains():
     string_utils = StringUtils()
     res = string_utils.contains("Anton", "t")
     assert res == True
+@pytest.mark.xfail(strict=True)
 def test_contains_negative():
     string_utils = StringUtils()
     res = string_utils.contains("Anton", "s")
     assert res == True
+@pytest.mark.xfail(strict=True)
 def test_contains_negative_two():
     string_utils = StringUtils()
     res = string_utils.contains("Anton", "o")
@@ -62,10 +66,12 @@ def test_delete_symbol():
     string_utils = StringUtils()
     res = string_utils.delete_symbol("Anton", "A")
     assert res == "nton"
+@pytest.mark.xfail(strict=True)
 def test_delete_symbol_negative():
     string_utils = StringUtils()
     res = string_utils.delete_symbol("Anton", "A")
     assert res == "Aton"
+@pytest.mark.xfail(strict=True)
 def test_delete_symbol_negative_two():
     string_utils = StringUtils()
     res = string_utils.delete_symbol("Anton", "A")
@@ -77,6 +83,7 @@ def test_starts_with():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", "A")
     assert res == True
+@pytest.mark.xfail(strict=True)
 def test_starts_with_negative():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", "n")
@@ -89,6 +96,7 @@ def test_end_with():
     string_utils = StringUtils()
     res = string_utils.end_with("Anton", "n")
     assert res == True
+@pytest.mark.xfail(strict=True)
 def test_end_with_negative():
     string_utils = StringUtils()
     res = string_utils.end_with("Anton", "A")
@@ -99,10 +107,12 @@ def test_is_empty():
     string_utils = StringUtils()
     res = string_utils.is_empty("")
     assert res == True
+@pytest.mark.xfail(strict=True)
 def test_is_empty_negative():
     string_utils = StringUtils()
     res = string_utils.is_empty(123)
     assert res == False
+@pytest.mark.xfail(strict=True)
 def test_is_empty_negative_two():
     string_utils = StringUtils()
     res = string_utils.is_empty("Антон")
@@ -113,6 +123,7 @@ def test_list_to_string():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
     assert res == ("A, n, t, o, n")
+@pytest.mark.xfail(strict=True)
 def test_list_to_string_negative():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
