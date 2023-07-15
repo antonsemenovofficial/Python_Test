@@ -10,7 +10,7 @@ string_utils = StringUtils()
 ])
 def test_trim_positive(str, result):
     string_utils = StringUtils()
-    res = string_utils.trim(str)
+    res = string_utils.trim(str, result)
     assert res == result
 def test_trim_negative():
     string_utils = StringUtils()
