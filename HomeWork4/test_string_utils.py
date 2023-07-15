@@ -8,7 +8,7 @@ string_utils = StringUtils()
 ("  Anton", "Anton"), 
 ("  4 april 2023", "4 april 2023")
 ])
-def test_trim_positive(str, result):
+def test_trim_positive(str):
     string_utils = StringUtils()
     res = string_utils.trim(str, result)
     assert res == result
