@@ -5,5 +5,18 @@ from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get("https://ya.ru")
+driver.get("https://vk.com")
 
-sleep(10)
+for x in range(1.10):   
+    driver.back()
+    driver.forward()
+
+
+
+
+
+
+
+
+
+sleep(15)
