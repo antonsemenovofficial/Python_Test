@@ -45,4 +45,4 @@ def test_is_empty():
 def test_list_to_string():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
-    assert res == ("A","n","t","o","n")
+    assert res == ("A,n,t,o,n")
