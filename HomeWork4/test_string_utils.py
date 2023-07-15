@@ -4,7 +4,7 @@ from string_utils import StringUtils
 string_utils = StringUtils()
 
 ## Убираем пробелы перед словом
-@pytest.mark.parametrize('str', 'result',[
+@pytest.mark.parametrize(str, 'result',[
 ("  Anton", "Anton"), 
 ("  4 april 2023", "4 april 2023")
 ])
