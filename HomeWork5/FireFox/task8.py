@@ -1,11 +1,10 @@
 from time import sleep
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
 driver.maximize_window()
 driver.get("http://the-internet.herokuapp.com/login")
@@ -26,3 +25,5 @@ login_bt.click()
 
 
 sleep(2)
+
+driver.close()
