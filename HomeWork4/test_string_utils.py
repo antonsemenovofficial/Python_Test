@@ -83,7 +83,7 @@ def test_starts_with():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", "A")
     assert res == True
-@pytest.mark.xfail(strict=False)
+@pytest.mark.xfail(strict=True)
 def test_starts_with_negative():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", "n")
