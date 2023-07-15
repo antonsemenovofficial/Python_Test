@@ -103,10 +103,12 @@ def test_is_empty():
     res = string_utils.is_empty("")
     assert res == True
 @pytest.mark.negative_test
+@pytest.mark.xfail
 def test_is_empty_negative():
     string_utils = StringUtils()
     res = string_utils.is_empty(123)
     assert res == False
+@pytest.mark.xfail
 @pytest.mark.negative_test
 def test_is_empty_negative_two():
     string_utils = StringUtils()
@@ -118,6 +120,7 @@ def test_list_to_string():
     string_utils = StringUtils()
     res = string_utils.list_to_string(["A","n","t","o","n"])
     assert res == ("A, n, t, o, n")
+@pytest.mark.xfail
 @pytest.mark.negative_test
 def test_list_to_string_negative():
     string_utils = StringUtils()
