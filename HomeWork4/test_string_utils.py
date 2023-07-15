@@ -18,8 +18,8 @@ def test_capitilize():
 
 def test_to_list():
     string_utils = StringUtils()
-    res = string_utils.to_list("Ark, ada")
-    assert res == ["Ark","ada"]
+    res = string_utils.to_list('Ark, ada')
+    assert res == ['Ark','ada']
 
 def test_contains():
     string_utils = StringUtils()
