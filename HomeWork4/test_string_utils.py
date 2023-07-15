@@ -4,13 +4,14 @@ from string_utils import StringUtils
 string_utils = StringUtils()
 
 ## Убираем пробелы перед словом
-@pytest.mark.parametrize(str, 'result',[
-("  Anton", "Anton"),
-])
-def test_trim_positive(str,result):
+def test_trim_positive():
     string_utils = StringUtils()
-    res = string_utils.trim(str)
-    assert res == result
+    res = string_utils.trim('  Anton')
+    assert res == 'Anton'
+def test_trim_positive_two():
+    string_utils = StringUtils()
+    res = string_utils.trim('  4 april 2023')
+    assert res == '4 april 2023'
 def test_trim_negative():
     string_utils = StringUtils()
     res = string_utils.trim('   Anton')
