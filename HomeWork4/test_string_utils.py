@@ -18,7 +18,7 @@ def test_capitilize():
 
 def test_to_list():
     string_utils = StringUtils()
-    res = string_utils.to_list("A","n","t","o","n")
+    res = string_utils.to_list("A, n, t, o, n")
     assert res == ["A","n","t","o","n"]
 
 def test_contains():
