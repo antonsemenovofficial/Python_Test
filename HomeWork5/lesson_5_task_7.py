@@ -12,7 +12,7 @@ driver.get("http://the-internet.herokuapp.com/inputs")
 
 input = "input"
 
-input_in = driver.find_element(By.CSS_SELECTOR, input)
+input_in = driver.find_element(By.CSS_SELECTOR, "input")
 sleep(2)
 
 input_in.send_keys('1000')
