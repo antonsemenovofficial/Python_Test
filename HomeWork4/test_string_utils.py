@@ -118,6 +118,11 @@ def test_starts_with_n3():
     string_utils = StringUtils()
     res = string_utils.starts_with("Anton", 1)
     assert res == True
+@pytest.mark.xfail(strict=True)
+def test_starts_with_n4():
+    string_utils = StringUtils()
+    res = string_utils.starts_with("Anton", None)
+    assert res == True
 
 
 ## Проверка буквы окончания слова
@@ -142,6 +147,11 @@ def test_end_with_n3():
     string_utils = StringUtils()
     res = string_utils.end_with("Anton", 123)
     assert res == True
+@pytest.mark.xfail(strict=True)
+def test_end_with_n4():
+    string_utils = StringUtils()
+    res = string_utils.end_with("Anton", None)
+    assert res == True
 
 ## Проверка пустой строки
 def test_is_empty():
@@ -163,6 +173,11 @@ def test_is_empty_n1():
 def test_is_empty_n2():
     string_utils = StringUtils()
     res = string_utils.is_empty("Антон")
+    assert res == True
+@pytest.mark.xfail(strict=True)
+def test_is_empty_n3():
+    string_utils = StringUtils()
+    res = string_utils.is_empty(None)
     assert res == True
 
 ## Перевод списка в строку
@@ -187,3 +202,8 @@ def test_list_to_string_n3():
     string_utils = StringUtils()
     res = string_utils.list_to_string(("123"))
     assert res == ("123")
+@pytest.mark.xfail(strict=True)
+def test_list_to_string_n4():
+    string_utils = StringUtils()
+    res = string_utils.list_to_string([None])
+    assert res == (" ")
