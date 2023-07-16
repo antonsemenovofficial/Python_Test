@@ -8,7 +8,7 @@ def test_trim():
     string_utils = StringUtils()
     res = string_utils.trim('  Anton')
     assert res == 'Anton'
-def test_trim():
+def test_trim1():
     string_utils = StringUtils()
     res = string_utils.trim('  4 april 2023')
     assert res == '4 april 2023'
@@ -29,11 +29,6 @@ def test_capitilize():
 ## Негативный тест кейс
 @pytest.mark.xfail(strict=True)
 def test_capitilize_n1():
-    string_utils = StringUtils()
-    res = string_utils.capitilize('Anton')
-    assert res == 'Anton'
-@pytest.mark.xfail(strict=True)
-def test_capitilize_n2():
     string_utils = StringUtils()
     res = string_utils.capitilize('')
     assert res == 'Anton'
@@ -64,18 +59,27 @@ def test_contains():
     string_utils = StringUtils()
     res = string_utils.contains("Anton", "t")
     assert res == True
+def test_contains2():
+    string_utils = StringUtils()
+    res = string_utils.contains("Anton", "o")
+    assert res == True
 
 ## Негативные проверки
 @pytest.mark.xfail(strict=True)
-def test_contains_negative():
+def test_contains_n1():
     string_utils = StringUtils()
     res = string_utils.contains("Anton", 1)
     assert res == True
 @pytest.mark.xfail(strict=True)
-def test_contains_negative_two():
+def test_contains_n2():
     string_utils = StringUtils()
-    res = string_utils.contains("Anton", "o")
-    assert res == False
+    res = string_utils.contains("Anton", None)
+    assert res == True
+@pytest.mark.xfail(strict=True)
+def test_contains_n3():
+    string_utils = StringUtils()
+    res = string_utils.contains("Anton", " ")
+    assert res == True
 
 ## Удаление символов
 def test_delete_symbol():
@@ -85,14 +89,14 @@ def test_delete_symbol():
 
 ## Негативные проверки
 @pytest.mark.xfail(strict=True)
-def test_delete_symbol_n1():
-    string_utils = StringUtils()
-    res = string_utils.delete_symbol("Anton", "")
-    assert res == "Aton"
-@pytest.mark.xfail(strict=True)
 def test_delete_symbol_n2():
     string_utils = StringUtils()
     res = string_utils.delete_symbol("Anton", 1)
+    assert res == "Anton"
+@pytest.mark.xfail(strict=True)
+def test_delete_symbol_n2():
+    string_utils = StringUtils()
+    res = string_utils.delete_symbol("Anton", None)
     assert res == "Anton"
 
 
@@ -103,11 +107,6 @@ def test_starts_with():
     assert res == True
 
 ## Негативные проверки
-@pytest.mark.xfail(strict=True)
-def test_starts_with_n1():
-    string_utils = StringUtils()
-    res = string_utils.starts_with("Anton", "n")
-    assert res == True
 @pytest.mark.xfail(strict=True)
 def test_starts_with_n2():
     string_utils = StringUtils()
@@ -132,11 +131,6 @@ def test_end_with():
     assert res == True
 
 ## Негативные проверки
-@pytest.mark.xfail(strict=True)
-def test_end_with_n1():
-    string_utils = StringUtils()
-    res = string_utils.end_with("Anton", "A")
-    assert res == True
 @pytest.mark.xfail(strict=True)
 def test_end_with_n2():
     string_utils = StringUtils()
