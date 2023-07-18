@@ -20,10 +20,10 @@ input_in = driver.find_element(By.CSS_SELECTOR, "input")
 input_in.send_keys("SkyPro")
 
 driver.find_element(By.CSS_SELECTOR, "#updatingButton").click()
-
 txt = driver.find_element(By.CSS_SELECTOR, "#updatingButton").text
 print('Кнопка после изменения ' + txt)
 
-waiter = WebDriverWait(driver, 15, 5).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,"#updatingButton"), "SkyPro"))
+
+waiter = WebDriverWait(driver, 15).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,"#updatingButton"), "SkyPro"))
 
 driver.quit()
