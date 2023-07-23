@@ -6,11 +6,16 @@ class MainPageTask3:
         self.driver = browser
 
     def get(self):
-        self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
-
-    def set_seconds(self,term):
-        self.driver.find_element(By.CSS_SELECTOR, "#delay").click()
-        self.driver.find_element(By.CSS_SELECTOR, "#delay").clear()
-        self.driver.find_element(By.CSS_SELECTOR, "#delay").send_keys(term)
-
-
+        self.driver.get("https://www.saucedemo.com/")
+        self.driver.implicitly_wait(7)
+    
+    def login(self,term):
+        self.driver.find_element(By.CSS_SELECTOR, "#user-name").click()
+        self.driver.find_element(By.CSS_SELECTOR, "#user-name").send_keys(term)
+    
+    def password(self,term):
+        self.driver.find_element(By.CSS_SELECTOR, "#user-name").click()
+        self.driver.find_element(By.CSS_SELECTOR, "#password").send_keys(term)
+    
+    def button_login(self):
+        self.driver.find_element(By.CSS_SELECTOR, "#login-button").click()
