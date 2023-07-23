@@ -8,13 +8,13 @@ class ResultPage:
     def __init__(self,browser):
         self.driver = browser
     
-    def table():
+    def table(self):
         self.driver.find_element(By.CSS_SELECTOR,"a[title='таблицей']").click()
         WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "table"))
         )
 
-    def add_books():
+    def add_books(self):
         buy_buttons = self.driver.find_elements(By.CSS_SELECTOR, ".btn.buy-link.btn-primary")
         counter = 0
         for btn in buy_buttons:
