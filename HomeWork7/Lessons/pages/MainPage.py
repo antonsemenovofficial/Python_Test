@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 class MainPage:
 
     def __init__(self, driver):
@@ -12,3 +14,7 @@ class MainPage:
             "value": "1"
         }
         self.driver.add_cookie(cookie)
+    
+    def search(self,term):
+        self.driver.find_element(By.CSS_SELECTOR, "#search-field").send_keys(term)
+        self.driver.find_element(By.CSS_SELECTOR,"button[type=submit]").click()

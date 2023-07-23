@@ -17,5 +17,6 @@ cookie = {
 def test_cart_counter():
     browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
-    main_page = MainPage();
+    main_page = MainPage(browser)
     main_page.set_cookie_policy()
+    main_page.search('python')
