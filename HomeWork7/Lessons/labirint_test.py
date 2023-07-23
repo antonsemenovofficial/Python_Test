@@ -23,11 +23,14 @@ def test_cart_counter():
     ##найти книги по Питону
     browser.find_element(By.CSS_SELECTOR, "#search-field").send_keys("Python")
     browser.find_element(By.CSS_SELECTOR,"button[type=submit]").click()
+    
     ##переключиться на таблицу
-
-    ##перейти на сайт лабиринта
+    browser.find_element(By.CSS_SELECTOR,"a[title='таблицей']").click()
 
     ##добавить все книги в коррзину и посчитать, сколько
+    buy_buttons = browser.find_elements(By.CSS_SELECTOR, ".btn.buy-link.btn-primary")
+    for btn in buy_buttons:
+        btn.click()
 
     ##перейти в корзину
 
