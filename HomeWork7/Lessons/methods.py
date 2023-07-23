@@ -12,7 +12,7 @@ cookie = {
     "value": "1"
 }
 
-browser=None
+browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
 def open_labirint():
     browser.get("https://www.labirint.ru")
@@ -47,7 +47,6 @@ def get_cart_counter():
 
 
 def test_cart_counter():
-    browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
     open_labirint()
     search('python')
     table()
