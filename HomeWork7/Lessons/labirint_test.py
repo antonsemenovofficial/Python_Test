@@ -21,7 +21,7 @@ def test_cart_counter():
     browser.add_cookie(cookie)
 
     ##найти книги по Питону
-    browser.find_element(By.CSS_SELECTOR, "#search_field").send_keys("Python")
+    browser.find_element(By.CSS_SELECTOR, "#search-field").send_keys("Python")
     browser.find_element(By.CSS_SELECTOR,"button[type=submit]").click()
     ##переключиться на таблицу
 
