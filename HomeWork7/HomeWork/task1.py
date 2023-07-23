@@ -7,12 +7,12 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from pages.MainPageTask import MainPageTask
+from pages.MainPageTask1 import MainPageTask1
 
 def test_red_field():
     browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
-    main_page = MainPageTask(browser)
+    main_page = MainPageTask1(browser)
     main_page.get()
     main_page.first_name('Иван')
     main_page.last_name('Петров')

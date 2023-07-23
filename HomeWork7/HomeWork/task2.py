@@ -7,13 +7,13 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from pages.MainPageTask1 import MainPageTask1
+from pages.MainPageTask2 import MainPageTask2
 from pages.CalculatorPage import CalculatorPage
 
 def test_calculator():
     browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
-    main_page = MainPageTask1(browser)
+    main_page = MainPageTask2(browser)
     main_page.get()
     main_page.set_seconds('45')
 
