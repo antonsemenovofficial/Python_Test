@@ -43,9 +43,7 @@ class MainPageTask1:
 
     def get_red_zip_code(self):
         id_zip = self.driver.find_element(By.CSS_SELECTOR, "#zip-code").text
-        if id_zip == 'zip-code':
-            div = self.driver.find_element(By.CSS_SELECTOR, "div.alert.py-2.alert-danger")
-            div_red = div.get_attribute("class")
-            return div_red.text
-        print(id_zip)
+        div = id_zip.find_element(By.CSS_SELECTOR, "div.alert.py-2.alert-danger")
+        div_red = div.get_attribute("class")
+        return div_red.text
 

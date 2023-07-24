@@ -28,7 +28,8 @@ def test_red_field():
 
     red = main_page.get_red_zip_code()
 
-    print(red)
 
 
-    # assert red == 'alert py-2 alert-danger'
+
+
+    assert red == 'alert py-2 alert-danger'
