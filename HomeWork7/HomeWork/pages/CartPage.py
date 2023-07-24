@@ -21,8 +21,8 @@ class CartPage:
         self.driver.find_element(By.CSS_SELECTOR, "#continue").click()
 
     def total(self):
-        self.driver.find_element(By.CSS_SELECTOR, "div.summary_info_label.summary_total_label").text
-        self.driver.quit()
+        div = self.driver.find_element(By.CSS_SELECTOR, "div.summary_info_label.summary_total_label")
+        return div.text
 
     
 

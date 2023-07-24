@@ -34,10 +34,5 @@ def test_online_shop():
     cart_page.continues()
     totals = cart_page.total()
 
+
     assert totals == "Total: $58.29"
-
-
-
-
-
-    sleep(10)
