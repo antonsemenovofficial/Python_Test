@@ -45,7 +45,7 @@ class MainPageTask1:
         id_zip = self.driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property('class')
     
     def check_first_name(self):
-        id_fn = self.driver.find_element(By.CSS_SELECTOR, "#first-name").value_of_css_property('class')
+        id_fn = self.driver.find_element(By.CSS_SELECTOR, "#first-name").value_of_css_property('color')
 
     def check_last_name(self):
         id_ln = self.driver.find_element(By.CSS_SELECTOR, "#last-name").value_of_css_property('class')
