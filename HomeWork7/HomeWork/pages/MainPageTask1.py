@@ -42,8 +42,31 @@ class MainPageTask1:
         self.driver.find_element(By.CSS_SELECTOR, "button.btn.btn-outline-primary.mt-3").click()
 
     def get_red_zip_code(self):
-        id_zip = self.driver.find_element(By.CSS_SELECTOR, "#zip-code").text
-        div = id_zip.find_element(By.CSS_SELECTOR, "div.alert.py-2.alert-danger")
-        div_red = div.get_attribute("class")
-        return div_red.text
+        id_zip = self.driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property('class')
+    
+    def check_first_name(self):
+        id_fn = self.driver.find_element(By.CSS_SELECTOR, "#first-name").value_of_css_property('class')
 
+    def check_last_name(self):
+        id_ln = self.driver.find_element(By.CSS_SELECTOR, "#last-name").value_of_css_property('class')
+    
+    def check_address(self):
+        id_address = self.driver.find_element(By.CSS_SELECTOR, "#address").value_of_css_property('class')
+    
+    def check_phone(self):
+        id_phone = self.driver.find_element(By.CSS_SELECTOR, "#phone").value_of_css_property('class')
+    
+    def check_email(self):
+        id_email = self.driver.find_element(By.CSS_SELECTOR, "#e-mail").value_of_css_property('class')
+    
+    def check_city(self):
+        id_city = self.driver.find_element(By.CSS_SELECTOR, "#city").value_of_css_property('class')
+    
+    def check_country(self):
+        id_country = self.driver.find_element(By.CSS_SELECTOR, "#country").value_of_css_property('class')
+    
+    def check_job(self):
+        id_job = self.driver.find_element(By.CSS_SELECTOR, "#job-position").value_of_css_property('class')
+    
+    def check_company(self):
+        self.driver.find_element(By.CSS_SELECTOR, "#company").value_of_css_property('class')

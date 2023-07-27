@@ -26,10 +26,29 @@ def test_red_field():
     main_page.company('SkyPro')
     main_page.submit()
 
-    red = main_page.get_red_zip_code()
+    zip = main_page.get_red_zip_code()
+    fn = main_page.check_first_name()
+    ln = main_page.check_last_name()
+    address = main_page.check_address()
+    email = main_page.check_email()
+    phone = main_page.check_phone()
+    city = main_page.check_city()
+    country = main_page.check_country()
+    job = main_page.check_job()
+    company = main_page.check_company()
 
 
 
 
 
-    assert red == 'alert py-2 alert-danger'
+    
+    assert fn == 'alert py-2 alert-success'
+    assert ln == 'alert py-2 alert-success'
+    assert address == 'alert py-2 alert-success'
+    assert email == 'alert py-2 alert-success'
+    assert phone == 'alert py-2 alert-success'
+    assert city == 'alert py-2 alert-success'
+    assert country == 'alert py-2 alert-success'
+    assert job == 'alert py-2 alert-success'
+    assert company == 'alert py-2 alert-success'
+    assert zip == 'alert py-2 alert-danger'
