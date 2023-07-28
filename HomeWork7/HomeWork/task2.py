@@ -15,7 +15,7 @@ def test_calculator():
 
     main_page = MainPageTask2(browser)
     main_page.get()
-    main_page.set_seconds('15')
+    main_page.set_seconds('45')
 
     calculator_page = CalculatorPage(browser)
     calculator_page.first_number()
@@ -24,6 +24,6 @@ def test_calculator():
     calculator_page.ravno()
 
             
-    result = calculator_page.result()
+    result = calculator_page.result_1()
 
     assert result == '15'

@@ -28,6 +28,13 @@ class CalculatorPage:
     def result(self):
         results = '15'
         WebDriverWait(self.driver, 70).until(
-            EC.text_to_be_present_in_element((By.CSS_SELECTOR, "div.screen"),results),
-            self.driver.find_element(By.CSS_SELECTOR, "div.screen").text
+            EC.text_to_be_present_in_element((By.CSS_SELECTOR, "div.screen"),results)
         )
+    
+    def result_1(self):
+        results = '15'
+        WebDriverWait(self.driver, 70).until(
+            EC.text_to_be_present_in_element((By.CSS_SELECTOR, "div.screen"),results)
+        )
+        result_1 = self.driver.find_element(By.CSS_SELECTOR, "div.screen").text
+        return result_1
