@@ -9,9 +9,26 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from pages.MainPageTask1 import MainPageTask1
 
-def test_red_field():
+def test_red_field_zip_code():
     browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+    main_page = MainPageTask1(browser)
+    main_page.get()
+    main_page.first_name('Иван')
+    main_page.last_name('Петров')
+    main_page.address('Ленина, 55-3')
+    main_page.email('test@skypro.com')
+    main_page.phone_number('+7985899998787')
+    main_page.zip_code('')
+    main_page.city('Москва')
+    main_page.country('Россия')
+    main_page.job_position('QA')
+    main_page.company('SkyPro')
+    main_page.submit()
+    zip = main_page.get_red_zip_code()
+    assert zip == 'rgba(248, 215, 218, 1)'
 
+def test_green_field_all():
+    browser = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
     main_page = MainPageTask1(browser)
     main_page.get()
     main_page.first_name('Иван')
@@ -26,7 +43,6 @@ def test_red_field():
     main_page.company('SkyPro')
     main_page.submit()
 
-    zip = main_page.get_red_zip_code()
     fn = main_page.check_first_name()
     ln = main_page.check_last_name()
     address = main_page.check_address()
@@ -36,11 +52,6 @@ def test_red_field():
     country = main_page.check_country()
     job = main_page.check_job()
     company = main_page.check_company()
-
-
-
-
-
     
     assert fn == 'rgba(209, 231, 221, 1)'
     assert ln == 'rgba(209, 231, 221, 1)'
@@ -51,4 +62,3 @@ def test_red_field():
     assert country == 'rgba(209, 231, 221, 1)'
     assert job == 'rgba(209, 231, 221, 1)'
     assert company == 'rgba(209, 231, 221, 1)'
-    assert zip == 'rgba(248, 215, 218, 1)'
