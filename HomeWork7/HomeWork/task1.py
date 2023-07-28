@@ -42,13 +42,13 @@ def test_red_field():
 
 
     
-    assert fn == 'alert py-2 alert-success'
-    assert ln == 'alert py-2 alert-success'
-    assert address == 'alert py-2 alert-success'
-    assert email == 'alert py-2 alert-success'
-    assert phone == 'alert py-2 alert-success'
-    assert city == 'alert py-2 alert-success'
-    assert country == 'alert py-2 alert-success'
-    assert job == 'alert py-2 alert-success'
-    assert company == 'alert py-2 alert-success'
-    assert zip == 'alert py-2 alert-danger'
+    assert fn == 'rgba(209, 231, 221, 1)'
+    assert ln == 'rgba(209, 231, 221, 1)'
+    assert address == 'rgba(209, 231, 221, 1)'
+    assert email == 'rgba(209, 231, 221, 1)'
+    assert phone == 'rgba(209, 231, 221, 1)'
+    assert city == 'rgba(209, 231, 221, 1)'
+    assert country == 'rgba(209, 231, 221, 1)'
+    assert job == 'rgba(209, 231, 221, 1)'
+    assert company == 'rgba(209, 231, 221, 1)'
+    assert zip == 'rgba(248, 215, 218, 1)'

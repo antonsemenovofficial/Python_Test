@@ -42,31 +42,41 @@ class MainPageTask1:
         self.driver.find_element(By.CSS_SELECTOR, "button.btn.btn-outline-primary.mt-3").click()
 
     def get_red_zip_code(self):
-        id_zip = self.driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property('class')
+        id_zip = self.driver.find_element(By.CSS_SELECTOR, '[id="zip-code"]').value_of_css_property("background-color")
+        return id_zip
     
     def check_first_name(self):
-        id_fn = self.driver.find_element(By.CSS_SELECTOR, "#first-name").value_of_css_property('color')
+        id_fn = self.driver.find_element(By.CSS_SELECTOR, '[id="first-name"]').value_of_css_property("background-color")
+        return id_fn
 
     def check_last_name(self):
-        id_ln = self.driver.find_element(By.CSS_SELECTOR, "#last-name").value_of_css_property('class')
+        id_ln = self.driver.find_element(By.CSS_SELECTOR, '[id="last-name"]').value_of_css_property("background-color")
+        return id_ln
     
     def check_address(self):
-        id_address = self.driver.find_element(By.CSS_SELECTOR, "#address").value_of_css_property('class')
+        id_address = self.driver.find_element(By.CSS_SELECTOR, '[id="address"]').value_of_css_property("background-color")
+        return id_address
     
     def check_phone(self):
-        id_phone = self.driver.find_element(By.CSS_SELECTOR, "#phone").value_of_css_property('class')
+        id_phone = self.driver.find_element(By.CSS_SELECTOR, '[id="phone"]').value_of_css_property("background-color")
+        return id_phone
     
     def check_email(self):
-        id_email = self.driver.find_element(By.CSS_SELECTOR, "#e-mail").value_of_css_property('class')
+        id_email = self.driver.find_element(By.CSS_SELECTOR, '[id="e-mail"]').value_of_css_property("background-color")
+        return id_email
     
     def check_city(self):
-        id_city = self.driver.find_element(By.CSS_SELECTOR, "#city").value_of_css_property('class')
+        id_city = self.driver.find_element(By.CSS_SELECTOR, '[id="city"]').value_of_css_property("background-color")
+        return id_city
     
     def check_country(self):
-        id_country = self.driver.find_element(By.CSS_SELECTOR, "#country").value_of_css_property('class')
+        id_country = self.driver.find_element(By.CSS_SELECTOR, '[id="country"]').value_of_css_property("background-color")
+        return id_country
     
     def check_job(self):
-        id_job = self.driver.find_element(By.CSS_SELECTOR, "#job-position").value_of_css_property('class')
+        id_job = self.driver.find_element(By.CSS_SELECTOR, '[id="job-position"]').value_of_css_property("background-color")
+        return id_job
     
     def check_company(self):
-        self.driver.find_element(By.CSS_SELECTOR, "#company").value_of_css_property('class')
+        id_company = self.driver.find_element(By.CSS_SELECTOR, '[id="company"]').value_of_css_property("background-color")
+        return id_company
