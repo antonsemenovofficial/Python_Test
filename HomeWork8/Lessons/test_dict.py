@@ -1,4 +1,5 @@
 empty_dict = {}
 
 def test_empty_dict():
-    assert len(empty_dict) == 0
+    value = empty_dict["key"]
+    assert value == None
